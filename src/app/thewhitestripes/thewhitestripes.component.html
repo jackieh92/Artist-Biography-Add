@@ -1,1 +1,31 @@
-<p>thewhitestripes works!</p>
+<div class="container">
+    <h1>Add The White Stripes Biography</h1>
+    <form [formGroup]="addartistBio" (ngSubmit)="getartistBio()">
+    <mat-form-field>
+        <mat-label>Artist/Band Name</mat-label>
+        <input type="text" matInput placeholder="Artist/Band Name" formControlName="bandName">
+    </mat-form-field>
+        <br>
+    <mat-form-field>
+        <mat-label>Number of Albums</mat-label>
+        <input type="text" matInput placeholder="Number of Albums" formControlName="albumNumber">
+    </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Number of Songs</mat-label>
+            <input type="text" matInput placeholder="Number of Songs" formControlName="songNumber">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Genre</mat-label>
+            <input type="text" matInput placeholder="Genre" formControlName="genre">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Biography</mat-label>
+            <input type="text" matInput placeholder="Biography" formControlName="biography">
+        </mat-form-field>
+        <br>
+        <button type="submit" mat-raised-button>Submit</button>
+    </form>
+</div>

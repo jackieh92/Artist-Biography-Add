@@ -7,17 +7,18 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class SofitukkerComponent implements OnInit {
 
-  addPlayerForm = new FormGroup({
-    playerName: new FormControl('',Validators.required),
-    rings: new FormControl(''),
-    jerseyNumber: new FormControl('', Validators.required),
-    team: new FormControl('', Validators.required)
+  addartistBio = new FormGroup({
+    bandName: new FormControl('',Validators.required),
+    albumNumber: new FormControl(''),
+    songNumber: new FormControl('', Validators.required),
+    genre: new FormControl('', Validators.required),
+    biography: new FormControl('', Validators.required)
   })
-
-  constructor() { }
-  getPlayerData(){
-    console.log(this.addPlayerForm.value)
-    this.addPlayerForm.reset()
+  
+  constructor(){ }
+  getartistBio(){
+    console.log(this.addartistBio.value)
+    this.addartistBio.reset()
   }
 
   ngOnInit(): void {

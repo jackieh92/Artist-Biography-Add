@@ -11,7 +11,8 @@ export class GorillazComponent implements OnInit {
     bandName: new FormControl('',Validators.required),
     albumNumber: new FormControl(''),
     songNumber: new FormControl('', Validators.required),
-    genre: new FormControl('', Validators.required)
+    genre: new FormControl('', Validators.required),
+    biography: new FormControl('', Validators.required)
   })
   
   constructor(){ }
