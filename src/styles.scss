@@ -29,4 +29,26 @@ $artistapp-theme: mat-light-theme($artistapp-primary, $artistapp-accent, $artist
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+form {
+    margin-left:50px;
+}
+a :visited {
+    color:#444;
+}
+a {
+    text-decoration: none;
+    font-size:30px;
+    padding:20px;
+    color:#444;
+}
+ul {
+list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+}
