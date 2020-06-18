@@ -1,0 +1,43 @@
+<mat-sidenav-container>
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side' " [opened]="false">
+        <mat-toolbar>Menu</mat-toolbar>
+        <mat-nav-list>
+<!--             <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+            <a mat-list-item routerLink="/artistbio" (click)="drawer.close()">Artist Biographies</a> -->
+<!--             <a mat-list-item routerLink="/sofitukker" (click)="drawer.close()">Sofi Tukker</a>
+            <a mat-list-item routerLink="/theblackkeys" (click)="drawer.close()">The Black Keys</a>
+            <a mat-list-item routerLink="/jimmyhendrix" (click)="drawer.close()">Jimmy Hendrix</a>
+            <a mat-list-item routerLink="/gorillaz" (click)="drawer.close()">Gorillaz</a>
+            <a mat-list-item routerLink="/thewhitestripes" (click)="drawer.close()">The White Stripes</a> -->
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+                *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+            </button>
+
+            <span class="logo" routerLink="/">Artist Biographies</span>
+<!--             <span class="logo" routerLink="/sofitukker">Artist Biographies</span>
+            <span class="logo" routerLink="/theblackkeys">Artist Biographies</span>
+            <span class="logo" routerLink="/jimmyhendrix">Artist Biographies</span>
+            <span class="logo" routerLink="/gorillaz">Artist Biographies</span>
+            <span class="logo" routerLink="/thewhitestripes">Artist Biographies</span> -->
+            <span class="fill-space"></span>
+
+            <div *ngIf="!(isHandset$ | async)">
+                <a mat-button routerLink="/">Home</a>
+                <a mat-button routerLink="/artistbio">Artist Biography</a>
+            </div>
+        </mat-toolbar>
+
+
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
